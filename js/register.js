@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     if (!localStorage.getItem("users")) {
         localStorage.setItem("users", JSON.stringify([]))
     }
-})
+})  // Код для того чтобы создать в Локального хранилща ячейку для юзеров
 
 const users = JSON.parse(localStorage.getItem("users"))
 
@@ -42,9 +42,8 @@ submitBtn.addEventListener("click", (event) => {
 
         }
        
-        localStorage.setItem("isAuth", "true")
 
-        window.open("../index.html")
+        window.open("../auth.html", "_self")
 
         emailInput.value = ""
         passwordInput.value = ""
